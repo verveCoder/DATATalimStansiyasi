@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="10dp"
         android:background="@drawable/constraint_back">
 
         <TextView
@@ -17,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/course_name"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_margin="10dp"
@@ -29,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/duration"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:layout_marginEnd="15dp"
             app:layout_constraintBottom_toBottomOf="@+id/name"
@@ -42,7 +43,8 @@
             android:layout_height="wrap_content"
             android:text="@string/price"
             android:textSize="18sp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/name"
