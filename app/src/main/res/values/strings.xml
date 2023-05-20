@@ -8,4 +8,5 @@
     <string name="duration">Duration</string>
     <string name="price">Price</string>
     <string name="data_courses_list">DATA Courses List</string>
+    <string name="data_talim_stansiyasi">Data Ta\'lim Stansiyasi</string>
 </resources>
