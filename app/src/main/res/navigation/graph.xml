@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/graph"
     app:startDestination="@id/mainFraqment">
     <fragment
@@ -41,5 +40,12 @@
         <action
             android:id="@+id/from_catalog_to_home"
             app:destination="@id/mainFraqment" />
+        <action
+            android:id="@+id/from_catalog_to_details"
+            app:destination="@id/detailsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="uz.data.talim.stansiyasi.DetailsFragment"
+        android:label="DetailsFragment" />
 </navigation>

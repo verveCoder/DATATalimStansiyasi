@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import kotlin.reflect.KFunction1
 
 class CoursesHolder(view: View): ViewHolder(view)
 
-class CoursesAdapter(private val CoursesList: List<Course>): Adapter<CoursesHolder>() {
+class CoursesAdapter(private val CoursesList: List<Course>, val navigate: KFunction1<Int, Unit>): Adapter<CoursesHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoursesHolder {
         val view = LayoutInflater
             .from(parent.context)
@@ -27,6 +28,10 @@ class CoursesAdapter(private val CoursesList: List<Course>): Adapter<CoursesHold
         courseName.text = course.name
         courseDuration.text = course.duration
         coursePrice.text = course.price
+
+        holder.itemView.setOnClickListener {
+            navigate(R.id.from_catalog_to_details)
+        }
     }
 
     override fun getItemCount(): Int {

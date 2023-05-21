@@ -3,6 +3,7 @@ package uz.data.talim.stansiyasi
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -33,7 +34,11 @@ class CatalogFragment: Fragment(R.layout.fragment_catalog) {
                     )
                 }
 
-                binding.corseslist.adapter = CoursesAdapter(items)
+                binding.corseslist.adapter = CoursesAdapter(items, ::navigate)
             }
+    }
+
+    private fun navigate(id: Int){
+        findNavController().navigate(id)
     }
 }
